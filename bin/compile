@@ -124,13 +124,9 @@ output_section "Determining release capabilities"
 capabilities_file="$cache_dir/out/capabilities"
 echo '{"distillery": {"eval": "elixir", "rpc": "no_print", "start_command": "start", "remote_command": "remote"}}' > $capabilities_file
 
-echo "Backing out"
-ls -l ../
-ls -l ../../
-echo "ls l"
-ls -l
-ls -l priv/
-ls -l priv/static
-ls -l priv/static/assets
+echo "ls -l on APP"
+ls -l /app/
+echo "ls -l on APP/lib"
+ls -l /app/lib
 # so it can be deleted outside of container
 chmod +w $cache_dir/out/capabilities
