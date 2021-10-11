@@ -123,6 +123,11 @@ chmod +w $cache_dir/out/$APP-$VERSION.tar.gz
 output_section "Determining release capabilities"
 capabilities_file="$cache_dir/out/capabilities"
 echo '{"distillery": {"eval": "elixir", "rpc": "no_print", "start_command": "start", "remote_command": "remote"}}' > $capabilities_file
+
+echo "Backing out"
+ls -l ../
+ls -l ../../
+echo "ls l"
 ls -l
 ls -l priv/
 ls -l priv/static
