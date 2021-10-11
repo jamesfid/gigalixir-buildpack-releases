@@ -123,6 +123,9 @@ chmod +w $cache_dir/out/$APP-$VERSION.tar.gz
 output_section "Determining release capabilities"
 capabilities_file="$cache_dir/out/capabilities"
 echo '{"distillery": {"eval": "elixir", "rpc": "no_print", "start_command": "start", "remote_command": "remote"}}' > $capabilities_file
-
+ls -l
+ls -l priv/
+ls -l priv/static
+ls -l priv/static/assets
 # so it can be deleted outside of container
 chmod +w $cache_dir/out/capabilities
